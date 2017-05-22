@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Drag &amp; Drop Puzzle</h1>
+    <div class="board__wrapper">
+      <span class="board__btn board__btn--timer" id="timerBtn">1:23</span>
+      <span class="board__btn board__btn--start" id="startBtn">Start</span>
+      <span class="board__btn board__btn--difficulty" id="difficultyBtn">
+        <input type="checkbox" id="difficultyInp" name="cc" />
+        <label for="difficultyInp"><span></span>Hard Mode</label>
+      </span>
+      <span class="board__btn board__btn--hint btn-disabled" id="hintBtn"></span>
+      <span class="board__btn board__btn--reset btn-disabled" id="resetBtn">Reset</span>
+      <img class="board__bg" src="assets/img/_Puzzle_bg_unsolved.png" alt="Unsolved puzzle">
+      <img class="board__bg-hint board__show-hint" id="hintImg" src="assets/img/_Puzzle_solved.png" alt="Unsolved puzzle">
+
+      <!-- FIRST ROW -->
+      
+      <span class="board__hexagon row-1 col-1" data-empty="true" id="hex-1" data-piece="45"></span>
+      <span class="board__hexagon row-1 col-3" data-empty="true" id="hex-2" data-piece="41"></span>
+      <span class="board__hexagon row-1 col-5" data-empty="true" id="hex-3" data-piece="37"></span>
+      <span class="board__hexagon row-1 col-7" data-empty="true" id="hex-4" data-piece="33"></span>
+      <span class="board__hexagon row-1 col-9" data-empty="true" id="hex-5" data-piece="29"></span>
+
+      <!-- SECOND ROW -->
+
+      <span class="board__hexagon row-2 col-2" data-empty="true" id="hex-6" data-piece="43"></span>
+      <span class="board__hexagon row-2 col-4" data-empty="true" id="hex-7" data-piece="39"></span>
+      <span class="board__hexagon row-2 col-6" data-empty="true" id="hex-8" data-piece="35"></span>
+      <span class="board__hexagon row-2 col-8" data-empty="true" id="hex-9" data-piece="31"></span>
+
+      <!-- THIRD ROW -->
+      
+      <span class="board__hexagon row-3 col-1" data-empty="true" id="hex-10" data-piece="44"></span>
+      <span class="board__hexagon row-3 col-3" data-empty="true" id="hex-11" data-piece="40"></span>
+      <span class="board__hexagon row-3 col-5" data-empty="true" id="hex-12" data-piece="36"></span>
+      <span class="board__hexagon row-3 col-7" data-empty="true" id="hex-13" data-piece="32"></span>
+      <span class="board__hexagon row-3 col-9" data-empty="true" id="hex-14" data-piece="28"></span>
+
+      <!-- FOURTH ROW -->
+
+      <span class="board__hexagon row-4 col-2" data-empty="true" id="hex-15" data-piece="42"></span>
+      <span class="board__hexagon row-4 col-4" data-empty="true" id="hex-16" data-piece="38"></span>
+      <span class="board__hexagon row-4 col-6" data-empty="true" id="hex-17" data-piece="34"></span>
+      <span class="board__hexagon row-4 col-8" data-empty="true" id="hex-18" data-piece="30"></span>
+
+      <!-- FIFTH ROW -->
+
+      <span class="board__hexagon row-5 col-1" data-empty="true" id="hex-19" data-piece="27"></span>
+      <span class="board__hexagon row-5 col-3" data-empty="true" id="hex-20" data-piece="18"></span>
+      <span class="board__hexagon row-5 col-5" data-empty="true" id="hex-21" data-piece="14"></span>
+      <span class="board__hexagon row-5 col-7" data-empty="true" id="hex-22" data-piece="10"></span>
+      <span class="board__hexagon row-5 col-9" data-empty="true" id="hex-23" data-piece="6"></span>
+
+      <!-- SIXTH ROW -->
+      
+      <span class="board__hexagon row-6 col-2" data-empty="true" id="hex-24" data-piece="25"></span>
+      <span class="board__hexagon row-6 col-4" data-empty="true" id="hex-25" data-piece="16"></span>
+      <span class="board__hexagon row-6 col-6" data-empty="true" id="hex-26" data-piece="12"></span>
+      <span class="board__hexagon row-6 col-8" data-empty="true" id="hex-27" data-piece="8"></span>
+
+      <!-- SEVENTH ROW -->
+
+      <span class="board__hexagon row-7 col-1" data-empty="true" id="hex-28" data-piece="26"></span>
+      <span class="board__hexagon row-7 col-3" data-empty="true" id="hex-29" data-piece="17"></span>
+      <span class="board__hexagon row-7 col-5" data-empty="true" id="hex-30" data-piece="13"></span>
+      <span class="board__hexagon row-7 col-7" data-empty="true" id="hex-31" data-piece="9"></span>
+      <span class="board__hexagon row-7 col-9" data-empty="true" id="hex-32" data-piece="5"></span>
+
+      <!-- EIGTH ROW -->
+
+      <span class="board__hexagon row-8 col-2" data-empty="true" id="hex-33" data-piece="24"></span>
+      <span class="board__hexagon row-8 col-4" data-empty="true" id="hex-34" data-piece="15"></span>
+      <span class="board__hexagon row-8 col-6" data-empty="true" id="hex-35" data-piece="11"></span>
+      <span class="board__hexagon row-8 col-8" data-empty="true" id="hex-36" data-piece="7"></span>
+
+      <!-- NINTH ROW -->
+
+      <span class="board__hexagon row-9 col-1" data-empty="true" id="hex-37" data-piece="23"></span>
+      <span class="board__hexagon row-9 col-3" data-empty="true" id="hex-38" data-piece="22"></span>
+      <span class="board__hexagon row-9 col-5" data-empty="true" id="hex-39" data-piece="21"></span>
+      <span class="board__hexagon row-9 col-7" data-empty="true" id="hex-40" data-piece="20"></span>
+      <span class="board__hexagon row-9 col-9" data-empty="true" id="hex-41" data-piece="19"></span>
+
+    </div>
+    <div class="pieces__wrapper" id="piecesWrapper">
+    </div>
+  </div>
+  <script type="text/javascript" src="js/pubsub.js"></script>
+  <script type="text/javascript" src="js/controls.js"></script>
+  <!-- <script type="text/javascript" src="js/scramble.js"></script> -->
+  <!-- <script type="text/javascript" src="js/dragndrop.js"></script> -->
+  <!-- <script type="text/javascript" src="js/init.js"></script> -->
+</body>
+
+</html>
+
