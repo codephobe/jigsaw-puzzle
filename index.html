@@ -16,7 +16,7 @@
   <div class="container">
     <h1>Drag &amp; Drop Puzzle</h1>
     <div class="board__wrapper">
-      <span class="board__btn board__btn--timer" id="timerBtn">1:23</span>
+      <span class="board__btn board__btn--timer" id="timerBtn"></span>
       <span class="board__btn board__btn--start" id="startBtn">Start</span>
       <span class="board__btn board__btn--difficulty" id="difficultyBtn">
         <input type="checkbox" id="difficultyInp" name="cc" />
@@ -25,7 +25,6 @@
       <span class="board__btn board__btn--hint btn-disabled" id="hintBtn"></span>
       <span class="board__btn board__btn--reset btn-disabled" id="resetBtn">Reset</span>
       <img class="board__bg" src="assets/img/_Puzzle_bg_unsolved.png" alt="Unsolved puzzle">
-      <img class="board__bg-hint board__show-hint" id="hintImg" src="assets/img/_Puzzle_solved.png" alt="Unsolved puzzle">
 
       <!-- FIRST ROW -->
       
@@ -95,15 +94,17 @@
       <span class="board__hexagon row-9 col-7" data-empty="true" id="hex-40" data-piece="20"></span>
       <span class="board__hexagon row-9 col-9" data-empty="true" id="hex-41" data-piece="19"></span>
 
+      <img class="board__bg-hint board__show-hint" id="hintImg" src="assets/img/_Puzzle_solved.png" alt="Solved puzzle">
     </div>
     <div class="pieces__wrapper" id="piecesWrapper">
     </div>
   </div>
   <script type="text/javascript" src="js/pubsub.js"></script>
   <script type="text/javascript" src="js/controls.js"></script>
-  <!-- <script type="text/javascript" src="js/scramble.js"></script> -->
-  <!-- <script type="text/javascript" src="js/dragndrop.js"></script> -->
-  <!-- <script type="text/javascript" src="js/init.js"></script> -->
+  <script type="text/javascript" src="js/initialize.js"></script>
+  <script type="text/javascript" src="js/difficulty.js"></script>
+  <script type="text/javascript" src="js/dragNDrop.js"></script>
+  <script type="text/javascript" src="js/gameOver.js"></script>
 </body>
 
 </html>
