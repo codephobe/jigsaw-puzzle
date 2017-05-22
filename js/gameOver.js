@@ -3,14 +3,16 @@
   events.on('gameLost', handleGameLost);
   events.on('gameWon', handleGameWon);
 
-  function handleGameLost() {
+  function handleGameLost(obj) {
     events.emit('reset');
   }
 
-  function handleGameWon(dropzones) {
-    for (var i = 0; i < dropzones.length; i++) {
+  function handleGameWon(obj) {
+    clearInterval(obj.timerInterval);
+
+    for (var i = 0; i < obj.dropzones.length; i++) {
       setTimeout(function(i) {
-        dropzones[i].classList.add('victory-dance');
+        obj.dropzones[i].classList.add('victory-dance');
       }.bind(null, i), i*60);
     }
   }

@@ -2,7 +2,8 @@
 
   events.on('initDnd', initDnd);
 
-  function initDnd() {
+  function initDnd(timerInterval) {
+    var timerInterval = timerInterval;
     var pieces = document.querySelectorAll('.pieces__wrapper img');
     var dropzones = document.querySelectorAll('.board__wrapper .board__hexagon');
     var correctPieces = 0;
@@ -50,7 +51,10 @@
 
     function checkCorrectPieces() {
       if (correctPieces === 41) {
-        events.emit('gameWon', dropzones);
+        events.emit('gameWon', {
+          dropzones: dropzones,
+          timerInterval: timerInterval
+        });
       }
     }
 

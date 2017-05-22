@@ -47,7 +47,7 @@
     timerInterval = setInterval(updateTimer, 1000);
 
     setTimeout(function() {
-      events.emit('initDnd')
+      events.emit('initDnd', timerInterval)
     }, 3000);
   }
 
