@@ -1,3 +1,4 @@
+//This module registers events from the controls
 (function() {
   // Cache dom
   var startBtn = document.getElementById('startBtn');

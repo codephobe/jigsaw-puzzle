@@ -38,18 +38,9 @@
 
     scrambleArray(pictureList);
 
-    // pictureList.forEach(function(num) {
-    //   piecesWrapper.innerHTML += '<img src="assets/img/Group' + num + '.png" id="piece' + num + '" draggable="true" data-piece="' + num + '">';
-    // })
-
-    for (var i = 0; i < pictureList.length; i++) {
-      setTimeout(function(i) {
-        var piece = document.createElement('img');
-        piece.src = 'assets/img/Group' + pictureList[i] + '.png';
-        piecesWrapper.appendChild(piece);
-        // piecesWrapper.innerHTML += '<img src="assets/img/Group' + pictureList[i] + '.png" id="piece' + pictureList[i] + '" draggable="true" data-piece="' + pictureList[i] + '">';
-      }.bind(null, i), i*60);
-    }
+    pictureList.forEach(function(num) {
+      piecesWrapper.innerHTML += '<img src="assets/img/Group' + num + '.png" id="piece' + num + '" draggable="true" data-piece="' + num + '">';
+    })
 
     remainingTime = hardmode ? 300 : 480;
     remainingHints = hardmode ? 3 : 6;
