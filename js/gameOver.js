@@ -1,4 +1,6 @@
 (function() {
+  var audioVictory = document.getElementById('audio-victory');
+
   //Bind Events
   events.on('gameLost', handleGameLost);
   events.on('gameWon', handleGameWon);
@@ -9,6 +11,7 @@
 
   function handleGameWon(obj) {
     clearInterval(obj.timerInterval);
+    audioVictory.play();
 
     for (var i = 0; i < obj.dropzones.length; i++) {
       setTimeout(function(i) {

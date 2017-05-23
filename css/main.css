@@ -276,3 +276,8 @@ input[type="checkbox"]:checked + label span {
 .col-9 {
   left: 723px;
 }
+
+
+audio {
+  display: none;
+}

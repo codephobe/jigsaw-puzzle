@@ -13,6 +13,9 @@
   var hintBtn = document.getElementById('hintBtn');
   var hintImg = document.getElementById('hintImg');
 
+  var audioReset = document.getElementById('audio-reset');
+  var audioButton = document.getElementById('audio-button');
+
   var pictureList = [];
   for (var i = 5; i <= 45; i++) {
     pictureList.push(i);
@@ -30,6 +33,7 @@
   events.on('hideHint', handleHideHint);
 
   function handleStart(hardmode) {
+    audioButton.play();
     startBtn.classList.add('btn-disabled');
     difficultyBtn.classList.add('btn-disabled');
     resetBtn.classList.remove('btn-disabled');
@@ -52,6 +56,7 @@
   }
 
   function handleReset() {
+    audioReset.play();
     emptyBoard();
     emptyPiecesWrapper();
 
@@ -114,6 +119,7 @@
   }
 
   function handleShowHint() {
+    audioButton.play();
     hintImg.classList.add('board__show-hint');
   }
 

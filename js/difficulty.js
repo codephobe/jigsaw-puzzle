@@ -2,6 +2,7 @@
 	//Cache DOM
 	var timerBtn = document.getElementById('timerBtn');
 	var hintBtn = document.getElementById('hintBtn');
+	var audioButton = document.getElementById('audio-button');
 
 	events.on('difficulty', handleDifficulty);
 
@@ -9,6 +10,7 @@
 	initHints();
 
 	function handleDifficulty(difficulty) {
+		audioButton.play();
 		initTimer(difficulty);
 		initHints(difficulty);
 	}

@@ -1,4 +1,5 @@
 (function() {
+  var audioButton = document.getElementById('audio-button');
 
   events.on('initDnd', initDnd);
 
@@ -40,6 +41,7 @@
         e.target.dataset.empty = "false";
 
         if (movedPiece.dataset.piece === this.dataset.piece) {
+          audioButton.play();
           movedPiece.setAttribute('draggable', false);
           movedPiece.style.cursor = 'not-allowed';
           movedPiece.classList.add('placed-correctly');
